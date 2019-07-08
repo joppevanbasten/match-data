@@ -102,29 +102,6 @@ public class GameController : MonoBehaviour
                     {
                         GameObject g = Instantiate(player);
                         g.GetComponent<PlayerData>().SetData(players[j].team, players[j].trackingID, players[j].playerNumber, players[j].xPosition, players[j].yPosition, players[j].speed);
-                        g.GetComponentInChildren<TextMeshPro>().text = g.GetComponent<PlayerData>().playerNumber.ToString();
-                        Renderer rend = g.GetComponent<Renderer>();
-                        switch (g.GetComponent<PlayerData>().team)
-                        {
-                            case 0:
-                                rend.material.SetColor("_Color", Color.red);
-                                break;
-                            case 1:
-                                rend.material.SetColor("_Color", Color.blue);
-                                break;
-                            case 2:
-                                rend.material.SetColor("_Color", Color.magenta);
-                                break;
-                            case 3:
-                                rend.material.SetColor("_Color", Color.black);
-                                break;
-                            case 4:
-                                rend.material.SetColor("_Color", Color.yellow);
-                                break;
-                            default:
-                                rend.material.SetColor("_Color", Color.white);
-                                break;
-                        }
                         playersGameObjects.Add(g);
                     }
                     isFirstFrame = false;

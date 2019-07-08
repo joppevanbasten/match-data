@@ -11,7 +11,7 @@ public class Cameras : MonoBehaviour
     static public int cam = 0;
     private void Start()
     {
-        cam1.gameObject.tag = "Main Camera";
+        cam1.gameObject.tag = "MainCamera";
         cam1.enabled = true;
         cam2.enabled = false;
         cam3.enabled = false;
